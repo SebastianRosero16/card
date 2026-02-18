@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto de Interfaces de Software - Layouts con Tailwind CSS
 
-## Getting Started
+Este proyecto implementa tres vistas diferentes mostrando conceptos de CSS Flexbox, Grid y un taller práctico con tarjetas de vuelos.
 
-First, run the development server:
+## Características Implementadas
+
+### 1. Flex Layout
+- Fondo oscuro (azul marino #0a1628)
+- Tarjetas con efecto glassmorphism (backdrop-blur)
+- Bordes redondeados (rounded-2xl)
+- Transparencias y sombras
+
+### 2. Grid Layout
+- Mismo estilo visual que Flex Layout
+- Demuestra conceptos de CSS Grid
+
+### 3. Taller Práctico (Flight Cards)
+- Tarjetas de vuelos estilo móvil
+- Imágenes con bordes muy redondeados (rounded-4xl)
+- Efecto blur/gradiente sobre las imágenes
+- Iconos SVG inline (corazón, precio, avión)
+- Botones con bordes completamente redondeados (rounded-full)
+- Sombras suaves (shadow-2xl)
+- Estados interactivos (hover, like)
+
+## Instalación y Ejecución
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Notas Importantes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Las imágenes de los vuelos usan URLs de Unsplash como placeholder
+- Puedes reemplazarlas con tus propias imágenes en la carpeta `/public`
+- Todos los iconos son SVG inline para mejor rendimiento
+- El proyecto usa Tailwind CSS v4 con la nueva sintaxis
 
-## Learn More
+## Estructura del Proyecto
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+/app
+  - page.tsx (página principal con navegación)
+  - layout.tsx
+  - globals.css
+/components
+  - FlexLayout.tsx
+  - GridLayout.tsx
+  - FlightCards.tsx
+/public
+  - (imágenes)
+```
